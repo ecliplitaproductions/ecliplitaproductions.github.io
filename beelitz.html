@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capitulo 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h2>Relógios</h2>
+<p class="small">Os ponteiros escondem algo. Observe a posição dos ponteiros com atenção.</p>
+
+<div class="grid">
+
+  <!-- 02:02 -->
+  <!-- Minutos: 2 → 12° | Horas: 2h02 → 60 + 1 = 61° -->
+  <div class="clock" title="02:02">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="14"
+        transform="rotate(12 50 50)" stroke="#cfcfcf" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="30"
+        transform="rotate(61 50 50)" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.8" fill="#fff"/>
+    </svg>
+  </div>
+
+  <!-- 08:11 -->
+  <!-- Minutos: 11 → 66° | Horas: 8h11 → 240 + 5.5 = 245.5° -->
+  <div class="clock" title="08:11">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="14"
+        transform="rotate(66 50 50)" stroke="#cfcfcf" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="30"
+        transform="rotate(245.5 50 50)" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.8" fill="#fff"/>
+    </svg>
+  </div>
+
+  <!-- 11:11 -->
+  <!-- Minutos: 11 → 66° | Horas: 11h11 → 330 + 5.5 = 335.5° -->
+  <div class="clock" title="11:11">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="14"
+        transform="rotate(66 50 50)" stroke="#cfcfcf" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="30"
+        transform="rotate(335.5 50 50)" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.8" fill="#fff"/>
+    </svg>
+  </div>
+
+  <!-- 01:08 -->
+  <!-- Minutos: 8 → 48° | Horas: 1h08 → 30 + 4 = 34° -->
+  <div class="clock" title="01:08">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="14"
+        transform="rotate(48 50 50)" stroke="#cfcfcf" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="30"
+        transform="rotate(34 50 50)" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.8" fill="#fff"/>
+    </svg>
+  </div>
+
+  <!-- 09:01 -->
+  <!-- Minutos: 1 → 6° | Horas: 9h01 → 270 + 0.5 = 270.5° -->
+  <div class="clock" title="09:01">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="14"
+        transform="rotate(6 50 50)" stroke="#cfcfcf" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="30"
+        transform="rotate(270.5 50 50)" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.8" fill="#fff"/>
+    </svg>
+  </div>
+
+  <!-- 05:04 -->
+  <!-- Minutos: 4 → 24° | Horas: 5h04 → 150 + 2 = 152° -->
+  <div class="clock" title="05:04">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#333" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="14"
+        transform="rotate(24 50 50)" stroke="#cfcfcf" stroke-width="2.6" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="30"
+        transform="rotate(152 50 50)" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="2.8" fill="#fff"/>
+    </svg>
+  </div>
+
+</div>
+
+
+
+<!-- linha 1..12 = rows; Column 0..11 = minutes/5 -->
+
+<!--| H\M | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+	| --- | - | - | - | - | - | - | - | - | - | - | -- | -- |
+	| 1   | A | B | C | D | E | F | G | H | I | J | K  | L  |
+	| 2   | M | N | O | P | Q | R | S | T | U | V | W  | X  |
+	| 3   | Y | Z | A | B | C | D | E | F | G | H | I  | J  |
+	| 4   | K | L | M | N | O | P | Q | R | S | T | U  | V  |
+	| 5   | W | X | Y | Z | A | B | C | D | E | F | G  | H  |
+	| 6   | I | J | K | L | M | N | O | P | Q | R | S  | T  |
+	| 7   | U | V | W | X | Y | Z | A | B | C | D | E  | F  |
+	| 8   | G | H | I | J | K | L | M | N | O | P | Q  | R  |
+	| 9   | S | T | U | V | W | X | Y | Z | A | B | C  | D  |
+	| 10  | E | F | G | H | I | J | K | L | M | N | O  | P  |
+	| 11  | Q | R | S | T | U | V | W | X | Y | Z | A  | B  |
+	| 12  | C | D | E | F | G | H | I | J | K | L | M  | N  | -->
+
+</body>
+</html>
