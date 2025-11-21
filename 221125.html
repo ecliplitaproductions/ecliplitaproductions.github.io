@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>CONTAGEM</title>
+<style>
+    body {
+        background: #030303;
+        color: #d4d4d4;
+        font-family: "Courier New", monospace;
+        text-align: center;
+        padding-top: 150px;
+        user-select: none;
+    }
+
+    #timer {
+        font-size: 48px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .msg {
+        font-size: 16px;
+        opacity: 0.5;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="timer">--d --h --m --s</div>
+<div class="msg">aguarde</div>
+
+<script>
+
+var countDownDate = new Date("2025-11-22 00:00:00").getTime();
+
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+if (distance < 0) {
+    clearInterval(x);
+    window.location.href = atob("v=dvoXf0HRis4");
+}
+
+
+    var days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+        days + "d " +
+        hours + "h " +
+        minutes + "m " +
+        seconds + "s";
+
+}, 1000);
+</script>
+
+</body>
+</html>
